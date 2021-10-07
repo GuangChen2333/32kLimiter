@@ -1,0 +1,5 @@
+name: 32kLimiter
+main: cn.guangchen233.limiter32k.LimiterMain
+version: RC1
+api-version: 1.12
+prefix: "32kLimiter"
