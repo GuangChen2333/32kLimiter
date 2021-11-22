@@ -1,5 +1,17 @@
 name: 32kLimiter
 main: cn.guangchen233.limiter32k.LimiterMain
-version: 0.0.2
+version: 1.0.0
+author: GuangChen233
+website: https://github.com/GuangChen2333/32kLimiter
 api-version: 1.12
-prefix: "32kLimiter"
+prefix: 32kLimiter
+
+commands:
+  32klimiter:
+    description: 32k limiter commands
+    usage: /32klimiter enable|disable
+    permission: 32klimiter.admin
+
+permissions:
+  32klimiter.admin:
+    default: op
