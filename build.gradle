@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'cn.guangchen233'
-version 'v0.0.1'
+version 'v0.0.2'
 
 repositories {
     maven {

@@ -84,8 +84,11 @@ public class EventListener implements Listener {
                 }
             }
         }
-        for (ItemStack item: abnormalItems) {
-            event.getInventory().remove(item);
+        if (abnormalItems.size() > 0) {
+            for (ItemStack item: abnormalItems) {
+                event.getInventory().remove(item);
+                abnormalItems.remove(item);
+            }
         }
     }
 }
