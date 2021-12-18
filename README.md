@@ -20,15 +20,17 @@ Enable plugin (temporarily)
 #### /32klimiter disable
 Disable plugin (temporarily)
 
----
-
 ## Config
 ```yaml
 # Plugin switch
 enabled: true
+# Debug Mode (print more logs)
+# Actually I used it myself, not practical
+debug_mode: false
 ```
 
----
-
-## TO-DO
-- [ ] Fix **InventoryClickEvent** on **v1.1**
+## Recent roadmap
+- [x] Debug Mode
+- [x] ~~Fix InventoryClickEvent~~ Listen **InventoryCloseEvent**
+- [x] Fix the problem that Shulker Box will be detected
+- [ ] Add the list of controlled items

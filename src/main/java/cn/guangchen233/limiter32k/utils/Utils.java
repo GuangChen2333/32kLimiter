@@ -1,12 +1,36 @@
 package cn.guangchen233.limiter32k.utils;
 
+import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Utils {
+    public static List<Material> getShulkerBoxes() {
+        return Arrays.asList(
+                Material.BLUE_SHULKER_BOX,
+                Material.BLACK_SHULKER_BOX,
+                Material.BROWN_SHULKER_BOX,
+                Material.CYAN_SHULKER_BOX,
+                Material.GRAY_SHULKER_BOX,
+                Material.GREEN_SHULKER_BOX,
+                Material.LIGHT_BLUE_SHULKER_BOX,
+                Material.LIME_SHULKER_BOX,
+                Material.MAGENTA_SHULKER_BOX,
+                Material.ORANGE_SHULKER_BOX,
+                Material.PINK_SHULKER_BOX,
+                Material.PURPLE_SHULKER_BOX,
+                Material.RED_SHULKER_BOX,
+                Material.SILVER_SHULKER_BOX,
+                Material.WHITE_SHULKER_BOX,
+                Material.YELLOW_SHULKER_BOX
+                );
+    }
+
     public static Map<String, Object> stringToMap(String str){
         str = str.replace("{", "");
         str = str.replace("}", "");
@@ -20,8 +44,8 @@ public class Utils {
     }
 
     public static boolean checkAbnormalInternal(ItemStack item) {
-        // I don't know what is that, but I found it may be suitable for detecting abnormal NBT
-        if (item != null) {
+        // I don't know what I got from it, but it did take effect
+        if (item != null && !getShulkerBoxes().contains(item.getType())) {
             Map<String, Object> serialize = item.serialize();
             if (serialize.containsKey("meta")) {
                 String meta_string = serialize.get("meta").toString().replace("UNSPECIFIC_META:", "");
