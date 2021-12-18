@@ -27,3 +27,8 @@ Disable plugin (temporarily)
 # Plugin switch
 enabled: true
 ```
+
+---
+
+## TO-DO
+- [ ] Fix **InventoryClickEvent** on **v1.1**
