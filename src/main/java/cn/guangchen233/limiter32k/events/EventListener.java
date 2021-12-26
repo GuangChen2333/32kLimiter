@@ -112,6 +112,7 @@ public class EventListener implements Listener {
     @EventHandler
     public void onInventoryCloseEvent(InventoryCloseEvent event) {
         if (enabled) {
+            // Player
             ItemStack[] items = event.getPlayer().getInventory().getStorageContents();
             if (items.length > 0) {
                 ArrayList<ItemStack> abnormalItems = new ArrayList<>();
@@ -125,6 +126,23 @@ public class EventListener implements Listener {
                 if (abnormalItems.size() > 0) {
                     for (ItemStack item : abnormalItems) {
                         event.getPlayer().getInventory().remove(item);
+                    }
+                }
+            }
+            // Inventory
+            ItemStack[] inventoryContents = event.getInventory().getStorageContents();
+            if (inventoryContents.length > 0) {
+                ArrayList<ItemStack> abnormalItems = new ArrayList<>();
+                for (ItemStack item : inventoryContents) {
+                    if (utils.checkItem(item)) {
+                        if (!abnormalItems.contains(item)) {
+                            abnormalItems.add(item);
+                        }
+                    }
+                }
+                if (abnormalItems.size() > 0) {
+                    for (ItemStack item : abnormalItems) {
+                        event.getInventory().remove(item);
                     }
                 }
             }

@@ -1,6 +1,6 @@
 name: 32kLimiter
 main: cn.guangchen233.limiter32k.LimiterMain
-version: 2.0.0
+version: 2.0.1
 author: GuangChen233
 website: https://github.com/GuangChen2333/32kLimiter
 api-version: 1.12
