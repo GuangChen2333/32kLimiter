@@ -12,12 +12,11 @@ public class LimiterMain extends JavaPlugin {
         saveDefaultConfig();
         FileConfiguration config = getConfig();
         boolean isEnabled = config.getBoolean("enabled");
-        boolean isDebugMode = config.getBoolean("debug_mode");
         this.getLogger().info("Thanks for using this plugin");
         this.getLogger().info("Current version: " + this.getDescription().getVersion());
         this.getLogger().info("Plugin enabled: " + isEnabled);
 
-        EventListener eventListener = new EventListener(isEnabled, isDebugMode, this.getLogger());
+        EventListener eventListener = new EventListener(isEnabled, this.getLogger());
         Bukkit.getPluginManager().registerEvents(eventListener, this);
         Bukkit.getPluginCommand("32klimiter").setExecutor(new LimiterCommand(eventListener));
     }

@@ -1,5 +1,2 @@
 # Plugin switch
 enabled: true
-# Debug Mode (print more logs)
-# Actually I used it myself, not practical
-debug_mode: false

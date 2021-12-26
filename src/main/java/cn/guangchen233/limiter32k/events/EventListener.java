@@ -16,14 +16,14 @@ import java.util.logging.Logger;
 
 public class EventListener implements Listener {
     private boolean enabled;
-    private final boolean debug_mode;
     private final Logger logger;
+    private final Utils utils;
     private final ItemStack AIR = new ItemStack(Material.AIR);
 
-    public EventListener(boolean enabled, boolean debug_mode, Logger logger) {
+    public EventListener(boolean enabled, Logger logger) {
         this.enabled = enabled;
-        this.debug_mode = debug_mode;
         this.logger = logger;
+        this.utils = new Utils(logger);
     }
 
     @EventHandler
@@ -34,12 +34,12 @@ public class EventListener implements Listener {
                     // is player
                     Player player = (Player) event.getDamager();
                     // main hand
-                    if (Utils.checkItem(player.getInventory().getItemInMainHand())) {
+                    if (utils.checkItem(player.getInventory().getItemInMainHand())) {
                         event.setDamage(40D);
                         player.getInventory().setItemInMainHand(AIR);
                     }
                     // off hand
-                    else if (Utils.checkItem(player.getInventory().getItemInOffHand())) {
+                    else if (utils.checkItem(player.getInventory().getItemInOffHand())) {
                         event.setDamage(40D);
                         player.getInventory().setItemInOffHand(AIR);
                     }
@@ -51,8 +51,8 @@ public class EventListener implements Listener {
     @EventHandler
     public void onPlayerSwapHandItems(PlayerSwapHandItemsEvent event) {
         if (enabled) {
-            boolean mainHandResult = Utils.checkItem(event.getMainHandItem());
-            boolean offHandResult = Utils.checkItem(event.getOffHandItem());
+            boolean mainHandResult = utils.checkItem(event.getMainHandItem());
+            boolean offHandResult = utils.checkItem(event.getOffHandItem());
             if (mainHandResult) {
                 event.setMainHandItem(AIR);
             }
@@ -66,7 +66,7 @@ public class EventListener implements Listener {
     public void EntityPickupItem(EntityPickupItemEvent event) {
         if (enabled) {
             ItemStack item = event.getItem().getItemStack();
-            if (Utils.checkItem(item)) {
+            if (utils.checkItem(item)) {
                 event.setCancelled(true);
                 event.getItem().remove();
             }
@@ -76,10 +76,7 @@ public class EventListener implements Listener {
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
         if (enabled) {
-            if (debug_mode) {
-                logger.info(event.getAction().name() + "|" + event.getInventory().getType().name());
-            }
-            if (Utils.checkItem(event.getCurrentItem())) {
+            if (utils.checkItem(event.getCurrentItem())) {
                 if (event.getInventory().getType() != InventoryType.HOPPER) {
                     event.setCurrentItem(AIR);
                 } else if (event.getAction() != InventoryAction.PICKUP_ALL) {
@@ -96,7 +93,7 @@ public class EventListener implements Listener {
             if (items.length > 0) {
                 ArrayList<ItemStack> abnormalItems = new ArrayList<>();
                 for (ItemStack item : items) {
-                    if (Utils.checkItem(item)) {
+                    if (utils.checkItem(item)) {
                         if (!abnormalItems.contains(item)) {
                             abnormalItems.add(item);
                         }
@@ -119,7 +116,7 @@ public class EventListener implements Listener {
             if (items.length > 0) {
                 ArrayList<ItemStack> abnormalItems = new ArrayList<>();
                 for (ItemStack item : items) {
-                    if (Utils.checkItem(item)) {
+                    if (utils.checkItem(item)) {
                         if (!abnormalItems.contains(item)) {
                             abnormalItems.add(item);
                         }

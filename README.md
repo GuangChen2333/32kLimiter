@@ -4,6 +4,9 @@ A spigot plugin for limiting 32k weapons
 
 Supported minecraft version: 1.12.2
 
+> Warning: In 2.0.0 and later versions, the plugin need the dependency `NBT API`
+
+> You can download it [Here](https://www.spigotmc.org/resources/nbt-api.7939/)
 ---
 
 ## Commands
@@ -24,13 +27,8 @@ Disable plugin (temporarily)
 ```yaml
 # Plugin switch
 enabled: true
-# Debug Mode (print more logs)
-# Actually I used it myself, not practical
-debug_mode: false
 ```
 
 ## Recent roadmap
-- [x] Debug Mode
-- [x] ~~Fix InventoryClickEvent~~ Listen **InventoryCloseEvent**
-- [x] Fix the problem that Shulker Box will be detected
-- [ ] Add the list of controlled items
+- [x] Use NBT to determine whether the item should be tested
+- [x] Delete debug mode
