@@ -1,5 +1,10 @@
 32kLimiter
 ---
+![Version](https://img.shields.io/github/v/release/GuangChen2333/32kLimiter)
+![Download](https://img.shields.io/github/downloads/GuangChen2333/32kLimiter/total)
+![License](https://img.shields.io/github/license/GuangChen2333/32kLimiter)
+![Stars](https://img.shields.io/github/stars/GuangChen2333/32kLimiter)
+
 A spigot plugin for limiting 32k weapons
 
 Supported minecraft version: 1.12.2
