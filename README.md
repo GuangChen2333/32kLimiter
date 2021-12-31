@@ -63,5 +63,5 @@ if you have suggestions for modification, please send a
 If you use this plug-in in your own server, 
 I hope you can put the repository link of this plug-in somewhere
 
-**This plugin is permanently free and open source. 
-If you purchased this plugin somewhere, you can contact for a refund**
+**This plugin is permanently free and open source.
+If you purchased this add-on somewhere, we suggest you refund**
