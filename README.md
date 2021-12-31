@@ -53,6 +53,15 @@ You can fork this repository and try to modify the functions you want by yoursel
 
 You can also contact the contact information provided on my homepage, of course, some fees will be charged.
 
-If you like this project, please star the repository or [donate](https://afdian.net/@GuangChen2333) to us, which will make a great contribution to our subsequent development work
+If you like this project, please star the repository or [donate](https://afdian.net/@GuangChen2333) to us, 
+which will make a great contribution to our subsequent development work
 
-This document is translated by Google Translate, some places may be inaccurately translated, if you have suggestions for modification, please send a [**pull requests**](https://github.com/GuangChen2333/32kLimiter/pulls)
+This document is translated by Google Translate, some places may be inaccurately translated, 
+if you have suggestions for modification, please send a 
+[**pull requests**](https://github.com/GuangChen2333/32kLimiter/pulls)
+
+If you use this plug-in in your own server, 
+I hope you can put the repository link of this plug-in somewhere
+
+**This plugin is permanently free and open source. 
+If you purchased this plugin somewhere, you can contact for a refund**
