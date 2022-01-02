@@ -16,13 +16,13 @@ import java.util.logging.Logger;
 
 public class EventListener implements Listener {
     private boolean enabled;
-    private final Logger logger;
+    // private final Logger logger;
     private final Utils utils;
     private final ItemStack AIR = new ItemStack(Material.AIR);
 
     public EventListener(boolean enabled, Logger logger) {
         this.enabled = enabled;
-        this.logger = logger;
+        // this.logger = logger;
         this.utils = new Utils(logger);
     }
 
