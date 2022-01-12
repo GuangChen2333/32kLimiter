@@ -51,7 +51,7 @@ enabled: true
 
 你可以尝试fork这个项目并且尝试修改出你想要的功能
 
-你也可以尝试联系我首页提供的联系方式，当然这会是收费的（不会很贵）
+你也可以尝试联系我首页提供的联系方式，或是在此项目处发送一个 [issue](https://github.com/GuangChen2333/32kLimiter/issues)
 
 如果你喜欢这个项目，请给我们点一个Star或是 [捐助](https://afdian.net/@GuangChen2333) 我们, 这将会对我们的开发工作做出极大的贡献
 

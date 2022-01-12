@@ -51,7 +51,8 @@ Other versions will not have significant updates
 
 You can fork this repository and try to modify the functions you want by yourself
 
-You can also contact the contact information provided on my homepage, of course, some fees will be charged.
+You can also contact the contact information provided on my homepage or send an 
+[issue](https://github.com/GuangChen2333/32kLimiter/issues) at this project.
 
 If you like this project, please star the repository or [donate](https://afdian.net/@GuangChen2333) to us, 
 which will make a great contribution to our subsequent development work
