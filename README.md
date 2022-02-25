@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/github/license/GuangChen2333/32kLimiter)
 ![Stars](https://img.shields.io/github/stars/GuangChen2333/32kLimiter)
 
-**English(By Google Translate)** | [简体中文](https://github.com/GuangChen2333/32kLimiter/blob/master/README_cn.md)
+**English** | [简体中文](https://github.com/GuangChen2333/32kLimiter/blob/master/README_cn.md)
 
 A Spigot plugin for limiting 32k weapons
 
