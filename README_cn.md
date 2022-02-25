@@ -5,11 +5,11 @@
 ![License](https://img.shields.io/github/license/GuangChen2333/32kLimiter)
 ![Stars](https://img.shields.io/github/stars/GuangChen2333/32kLimiter)
 
-[English(By Google Translate)](https://github.com/GuangChen2333/32kLimiter/blob/master/README.md) | **简体中文**
+[English](https://github.com/GuangChen2333/32kLimiter/blob/master/README.md) | **简体中文**
 
-一个用于限制32k武器的spigot插件
+一个用于限制32k武器的Spigot插件
 
-支持的Minecraft版本: 1.12.2
+受支持的Minecraft版本: 1.12.2
 
 > 注意: 在 2.0.0 及以后的版本中, 本插件将依赖于 `NBT API`
 
@@ -45,17 +45,7 @@ enabled: true
 ## 关于
 本插件不会彻底封杀32k武器, 玩家们可以在漏斗中正常使用32k（类似于2b2t）
 
-[2.0.0](https://github.com/GuangChen2333/32kLimiter/releases/latest) 将会是 32kLimiter的最后一个大版本
-
-今后的版本将不会发布其他的重大更新
-
-你可以尝试fork这个项目并且尝试修改出你想要的功能
-
-你也可以尝试联系我首页提供的联系方式，或是在此项目处发送一个 [issue](https://github.com/GuangChen2333/32kLimiter/issues)
-
 如果你喜欢这个项目，请给我们点一个Star或是 [捐助](https://afdian.net/@GuangChen2333) 我们, 这将会对我们的开发工作做出极大的贡献
-
-另外，本仓库的英文文档采用谷歌机翻，如果你想尝试修改文档，欢迎发送PR。
 
 如果你在您自己的服务器中使用了本插件，我很希望你可以在某个地方放上本插件的仓库链接
 
