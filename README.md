@@ -17,36 +17,32 @@ Supported versions of Minecraft: 1.12.2
 ---
 
 ## Commands
-| Command | Permission | Description |
-| --- | --- | --- |
-| /32klimiter | 32klimiter.admin | 32k limiter commands |
 
-### /32klimiter
-usage: /32klimiter enable|disable
-
-**/32klimiter enable:**
-
-Enable plugin (temporarily)
-
-**/32klimiter disable:**
-
-Disable plugin (temporarily)
+| Command             | Permission       | Description                          |
+|---------------------|------------------|--------------------------------------|
+| /32klimiter         | 32klimiter.admin | Get help                             |
+| /32klimiter reload  | ~                | Reload configuration files           |
+| /32klimiter enable  | ~                | Temporarily enable the plugin        |
+| /32klimiter disable | ~                | Temporarily disable the plugin       |
+| /32klimiter status  | ~                | Get the current status of the plugin |
 
 ## Config
+
 ```yaml
 # Plugin switch
 enabled: true
 ```
 
-## Recent roadmap
-- [x] Use NBT to detect if an item should be deleted
-- [x] Delete debug mode
-
 ## About
-This plugin does not completely block 32k weapons, players can use 32k in the **hopper** as normal (similar to 2b2t servers)
 
-If you like this project, please give us a Star or [donate to us](https://afdian.net/@GuangChen2333), it will make a great contribution to our development work!
+This plugin does not completely block 32k weapons, players can use 32k in the **hopper** as normal (similar to 2b2t
+servers)
 
-If you are using this plugin on your own server, I'd love it if you could put a link to the plugin's repository somewhere
+If you like this project, please give us a Star or [donate to us](https://afdian.net/@GuangChen2333), it will make a
+great contribution to our development work!
 
-**This plugin is permanently free and open source, if you have purchased this plugin somewhere, we recommend contacting for a refund**
+If you are using this plugin on your own server, I'd love it if you could put a link to the plugin's repository
+somewhere
+
+**This plugin is permanently free and open source, if you have purchased this plugin somewhere, we recommend contacting
+for a refund**

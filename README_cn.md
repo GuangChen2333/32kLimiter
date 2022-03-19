@@ -17,32 +17,24 @@
 ---
 
 ## 命令
-| 命令 | 权限 | 描述 |
-| --- | --- | --- |
-| /32klimiter | 32klimiter.admin | 32k limiter commands |
 
-### /32klimiter
-使用方法: /32klimiter enable|disable
-
-**/32klimiter enable:**
-
-暂时启用插件
-
-**/32klimiter disable:**
-
-暂时关闭插件
+| 命令                  | 权限               | 说明         |
+|---------------------|------------------|------------|
+| /32klimiter         | 32klimiter.admin | 获取帮助       |
+| /32klimiter reload  | ~                | 重新加载配置文件   |
+| /32klimiter enable  | ~                | 暂时启用该插件    |
+| /32klimiter disable | ~                | 暂时停用该插件    |
+| /32klimiter status  | ~                | 获取该插件的当前状态 |
 
 ## 配置文件
+
 ```yaml
 # Plugin switch
 enabled: true
 ```
 
-## 近期更新/规划
-- [x] 使用NBT检测物品是否应该被删除
-- [x] 删除调试模式
-
 ## 关于
+
 本插件不会彻底封杀32k武器, 玩家们可以在漏斗中正常使用32k（类似于2b2t）
 
 如果你喜欢这个项目，请给我们点一个Star或是 [捐助](https://afdian.net/@GuangChen2333) 我们, 这将会对我们的开发工作做出极大的贡献
