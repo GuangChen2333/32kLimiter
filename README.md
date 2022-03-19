@@ -5,13 +5,13 @@
 ![License](https://img.shields.io/github/license/GuangChen2333/32kLimiter)
 ![Stars](https://img.shields.io/github/stars/GuangChen2333/32kLimiter)
 
-**English(By Google Translate)** | [简体中文](https://github.com/GuangChen2333/32kLimiter/blob/master/README_cn.md)
+**English** | [简体中文](https://github.com/GuangChen2333/32kLimiter/blob/master/README_cn.md)
 
-A spigot plugin for limiting 32k weapons
+A Spigot plugin for limiting 32k weapons
 
-Supported minecraft version: 1.12.2
+Supported versions of Minecraft: 1.12.2
 
-> Warning: In 2.0.0 and later versions, the plugin need the dependency `NBT API`
+> Note: In version 2.0.0 and later, this plugin will rely on the `NBT API`
 
 > You can download it [Here](https://www.spigotmc.org/resources/nbt-api.7939/)
 ---
@@ -39,30 +39,14 @@ enabled: true
 ```
 
 ## Recent roadmap
-- [x] Use NBT to determine whether the item should be tested
+- [x] Use NBT to detect if an item should be deleted
 - [x] Delete debug mode
 
 ## About
-This plugin will not completely block 32k, it will let players use them in the **hopper** (similar to 2b2t)
+This plugin does not completely block 32k weapons, players can use 32k in the **hopper** as normal (similar to 2b2t servers)
 
-Version [2.0.0](https://github.com/GuangChen2333/32kLimiter/releases/latest) will be the last version of 32kLimiter
+If you like this project, please give us a Star or [donate to us](https://afdian.net/@GuangChen2333), it will make a great contribution to our development work!
 
-Other versions will not have significant updates
+If you are using this plugin on your own server, I'd love it if you could put a link to the plugin's repository somewhere
 
-You can fork this repository and try to modify the functions you want by yourself
-
-You can also contact the contact information provided on my homepage or send an 
-[issue](https://github.com/GuangChen2333/32kLimiter/issues) at this project.
-
-If you like this project, please star the repository or [donate](https://afdian.net/@GuangChen2333) to us, 
-which will make a great contribution to our subsequent development work
-
-This document is translated by Google Translate, some places may be inaccurately translated, 
-if you have suggestions for modification, please send a 
-[**pull requests**](https://github.com/GuangChen2333/32kLimiter/pulls)
-
-If you use this plug-in in your own server, 
-I hope you can put the repository link of this plug-in somewhere
-
-**This plugin is permanently free and open source.
-If you purchased this add-on somewhere, we suggest you refund**
+**This plugin is permanently free and open source, if you have purchased this plugin somewhere, we recommend contacting for a refund**
