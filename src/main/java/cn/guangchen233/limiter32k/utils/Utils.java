@@ -8,16 +8,9 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.Map;
-import java.util.logging.Logger;
 
 public class Utils {
-    private final Logger logger;
-
-    public Utils(Logger logger) {
-        this.logger = logger;
-    }
-
-    public boolean checkAbnormalInternal(ItemStack item) {
+    public boolean checkAbnormalNBT(ItemStack item) {
         if (item != null && item.getType() != Material.AIR) {
             NBTItem nbtItem = new NBTItem(item);
             NBTCompoundList attrs = nbtItem.getCompoundList("AttributeModifiers");
@@ -48,8 +41,7 @@ public class Utils {
 
     public boolean checkItem(ItemStack itemStack) {
         if (itemStack != null) {
-            return checkAbnormalInternal(itemStack)
-                    || checkAbnormalEnchantment(itemStack);
+            return checkAbnormalNBT(itemStack) || checkAbnormalEnchantment(itemStack);
         }
         return false;
     }

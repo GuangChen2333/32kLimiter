@@ -1,5 +1,6 @@
 package cn.guangchen233.limiter32k.events;
 
+import cn.guangchen233.limiter32k.LimiterMain;
 import cn.guangchen233.limiter32k.utils.Utils;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -12,34 +13,22 @@ import org.bukkit.event.player.PlayerSwapHandItemsEvent;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 public class EventListener implements Listener {
-    private boolean enabled;
-    // private final Logger logger;
-    private final Utils utils;
+    private final Utils utils = new Utils();
     private final ItemStack AIR = new ItemStack(Material.AIR);
-
-    public EventListener(boolean enabled, Logger logger) {
-        this.enabled = enabled;
-        // this.logger = logger;
-        this.utils = new Utils(logger);
-    }
 
     @EventHandler
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
-        if (enabled) {
+        if (LimiterMain.isEnabled) {
             if (event.getDamage() > 30D) {
                 if (event.getDamager() instanceof Player) {
-                    // is player
                     Player player = (Player) event.getDamager();
-                    // main hand
                     if (utils.checkItem(player.getInventory().getItemInMainHand())) {
                         event.setDamage(40D);
                         player.getInventory().setItemInMainHand(AIR);
                     }
-                    // off hand
-                    else if (utils.checkItem(player.getInventory().getItemInOffHand())) {
+                    if (utils.checkItem(player.getInventory().getItemInOffHand())) {
                         event.setDamage(40D);
                         player.getInventory().setItemInOffHand(AIR);
                     }
@@ -50,7 +39,7 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void onPlayerSwapHandItems(PlayerSwapHandItemsEvent event) {
-        if (enabled) {
+        if (LimiterMain.isEnabled) {
             boolean mainHandResult = utils.checkItem(event.getMainHandItem());
             boolean offHandResult = utils.checkItem(event.getOffHandItem());
             if (mainHandResult) {
@@ -64,7 +53,7 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void EntityPickupItem(EntityPickupItemEvent event) {
-        if (enabled) {
+        if (LimiterMain.isEnabled) {
             ItemStack item = event.getItem().getItemStack();
             if (utils.checkItem(item)) {
                 event.setCancelled(true);
@@ -75,7 +64,7 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void onInventoryClick(InventoryClickEvent event) {
-        if (enabled) {
+        if (LimiterMain.isEnabled) {
             if (utils.checkItem(event.getCurrentItem())) {
                 if (event.getInventory().getType() != InventoryType.HOPPER) {
                     event.setCurrentItem(AIR);
@@ -88,7 +77,7 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void onInventoryOpen(InventoryOpenEvent event) {
-        if (enabled) {
+        if (LimiterMain.isEnabled) {
             ItemStack[] items = event.getInventory().getStorageContents();
             if (items.length > 0) {
                 ArrayList<ItemStack> abnormalItems = new ArrayList<>();
@@ -111,7 +100,7 @@ public class EventListener implements Listener {
 
     @EventHandler
     public void onInventoryCloseEvent(InventoryCloseEvent event) {
-        if (enabled) {
+        if (LimiterMain.isEnabled) {
             // Player
             ItemStack[] items = event.getPlayer().getInventory().getStorageContents();
             if (items.length > 0) {
@@ -147,13 +136,5 @@ public class EventListener implements Listener {
                 }
             }
         }
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
     }
 }
