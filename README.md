@@ -29,7 +29,7 @@ Supported versions of Minecraft: 1.12.2
 ## Config
 
 ```yaml
-# Plugin switch
+# Plugin master switch
 enabled: true
 ```
 

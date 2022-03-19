@@ -29,7 +29,7 @@
 ## 配置文件
 
 ```yaml
-# Plugin switch
+# 插件总开关
 enabled: true
 ```
 
