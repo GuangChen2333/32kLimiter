@@ -5,6 +5,8 @@
 ![License](https://img.shields.io/github/license/GuangChen2333/32kLimiter)
 ![Stars](https://img.shields.io/github/stars/GuangChen2333/32kLimiter)
 
+> 这个插件是非必须的，将**暂停维护**
+
 [English](https://github.com/GuangChen2333/32kLimiter/blob/master/README.md) | **简体中文**
 
 一个用于限制32k武器的Spigot插件
