@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/github/license/GuangChen2333/32kLimiter)
 ![Stars](https://img.shields.io/github/stars/GuangChen2333/32kLimiter)
 
-> 这个插件是非必须的，将**暂停维护**
+> 因用户少而**暂停更新**
 
 [English](https://github.com/GuangChen2333/32kLimiter/blob/master/README.md) | **简体中文**
 
