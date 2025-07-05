@@ -1,3 +1,6 @@
+> [!CAUTION]
+> After July 5, 2025, this project will be archived and no longer maintained.
+
 32kLimiter
 ---
 ![Version](https://img.shields.io/github/v/release/GuangChen2333/32kLimiter)
